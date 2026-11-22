@@ -1,0 +1,5 @@
+node_modules/
+host/dist/
+editor/test/test_document
+lsp/test/test_lsp
+*.o

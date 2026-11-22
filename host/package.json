@@ -1,0 +1,21 @@
+{
+  "name": "host",
+  "version": "1.0.0",
+  "description": "HaikuIDE extension host",
+  "main": "dist/main.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "tsc -p . && node test/test_host.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "typescript": "^5.4.5"
+  }
+}

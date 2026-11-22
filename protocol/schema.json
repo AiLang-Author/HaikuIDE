@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "framing": "Content-Length",
+  "vscodeVersion": "1.85.0",
+  "notes": "JSON-RPC 2.0. Requests carry id and get a result or error. Notifications have no id. Unknown methods are logged and do not stop either process. Positions are UTF-16, matching LSP and the vscode API. triggerKind uses LSP numbers: 1 invoked, 2 trigger character.",
+  "shellToHost": {
+    "workspace/open": {"params": ["rootUri", "rootPath"]},
+    "workspace/close": {},
+    "doc/didOpen": {"params": ["uri", "languageId", "version", "text"]},
+    "doc/didChange": {"params": ["uri", "version", "text"]},
+    "doc/didSave": {"params": ["uri", "text"]},
+    "doc/didClose": {"params": ["uri"]},
+    "command/execute": {"params": ["command", "args"]},
+    "completion/request": {"params": ["uri", "line", "character", "triggerKind", "triggerCharacter"]},
+    "hover/request": {"params": ["uri", "line", "character"]},
+    "definition/request": {"params": ["uri", "line", "character"]}
+  },
+  "hostToShell": {
+    "host/hello": {"params": ["vscodeVersion", "extensions"]},
+    "host/activated": {"params": ["id"]},
+    "host/extensionFailed": {"params": ["id", "message"]},
+    "host/unimplemented": {"params": ["method", "extensionId", "count"]},
+    "command/register": {"params": ["command"]},
+    "command/unregister": {"params": ["command"]},
+    "diagnostics/set": {"params": ["uri", "path", "diagnostics"]},
+    "completion/result": {"params": ["id", "items"]},
+    "hover/result": {"params": ["id", "text"]},
+    "definition/result": {"params": ["id", "locations"]},
+    "doc/applyEdit": {"params": ["path", "pos", "len", "text"]},
+    "ui/message": {"params": ["level", "message"]},
+    "output/append": {"params": ["channel", "text"]},
+    "status/set": {"params": ["text"]}
+  }
+}

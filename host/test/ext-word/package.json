@@ -1,0 +1,12 @@
+{
+  "name": "word",
+  "publisher": "haikuide",
+  "displayName": "HaikuIDE word",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.85.0" },
+  "main": "./extension.js",
+  "activationEvents": ["onLanguage:cpp", "onLanguage:plaintext"],
+  "contributes": {
+    "languages": [{ "id": "cpp", "extensions": [".cpp", ".h", ".hpp"] }]
+  }
+}
